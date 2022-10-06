@@ -29,11 +29,7 @@ goto :cleanbuild
 :cleanbuild
 echo ### Cleaning the %configuration% build directory
 cd %BUIDROOT%\native
-call build.cmd cleanbuild %configuration% Win32
-if %errorlevel% neq 0 exit /b %errorlevel%
-call build.cmd cleanbuild %configuration% x64
-if %errorlevel% neq 0 exit /b %errorlevel%
-call build.cmd cleanbuild %configuration% arm64
+call build-all.cmd cleanbuild %configuration%
 if %errorlevel% neq 0 exit /b %errorlevel%
 goto :build
 
@@ -42,11 +38,7 @@ echo ### Building the %configuration% configuration
 cd %BUIDROOT%\native
 REM /verbosity:minimal
 
-call build.cmd build %configuration% Win32
-if %errorlevel% neq 0 exit /b %errorlevel%
-call build.cmd build %configuration% x64
-if %errorlevel% neq 0 exit /b %errorlevel%
-call build.cmd build %configuration% arm64
+call build-all.cmd build %configuration%
 if %errorlevel% neq 0 exit /b %errorlevel%
 
 echo ### Updating WinP resource files for the %configuration% build
