@@ -26,6 +26,8 @@ include_directories(${JAVA_HOME}/include ${JAVA_HOME}/include/win32)
 
 set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /MT")
 
+add_compile_definitions("UNICODE" "_UNICODE")
+
 add_library(winp SHARED
         auto_handle.h
         enableDebugPrivilege.cpp
