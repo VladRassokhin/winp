@@ -7,9 +7,6 @@ endif ()
 
 set(CMAKE_C_FLAGS_RELEASE "${CMAKE_C_FLAGS_RELEASE} /MT")
 
-define_project_part(winp)
-define_project_part(sendctrlc)
-
 add_library(winp SHARED
         auto_handle.h
         enableDebugPrivilege.cpp
