@@ -1,7 +1,5 @@
 # Windows process management library (WinP)
 
-[![Build status](https://ci.appveyor.com/api/projects/status/0w6ivhpkt20d88md?svg=true)](https://ci.appveyor.com/project/oleg-nenashev/winp)
-
 This project develops a library that lets you control Windows processes better, beyond what's available in JDK. 
 
 Features summary:
@@ -19,9 +17,9 @@ See [the library's Javadoc][javadoc] for more details.
 Starting with 1.29, this library is published at:
 
 ```xml
-<repository>
-  <id>repo.jenkins-ci.org</id>
-  <url>https://repo.jenkins-ci.org/releases/</url>
+ <repository>
+    <id>intellij-dependencies</id>
+    <url>https://cache-redirector.jetbrains.com/intellij-dependencies</url>
 </repository>
 ```
 
@@ -33,7 +31,7 @@ WinP Library includes native libraries for all supported platforms, hence it can
 
 ## Platform support
 
-The library supports _x86_ and _amd64_ architectures.
+The library supports _x86_, _amd64_ and _arm64_ architectures.
 ARM architecture is not supported.
 Please raise an issue to the library if you need ARM support && ready to provide proper test environment.
 
@@ -46,8 +44,8 @@ E.g. any process information query call (e.g. Environment variables retrieval) m
 
 The current version of WinP is known to work correctly on the following Windows versions:
 
-* Windows XP SP2 and above
-* Windows Server 2003 and above
+* Windows 10 and above
+* Windows Server 2019 and above
 
 Other Windows product lines are not being actively tested though WinP may work there.
 

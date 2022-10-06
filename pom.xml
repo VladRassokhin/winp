@@ -8,17 +8,17 @@
   </parent>
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.jvnet.winp</groupId>
+  <groupId>org.jetbrains.intellij.deps.winp</groupId>
   <artifactId>winp</artifactId>
   <version>${revision}${changelist}</version>
   <name>winp</name>
   <description>Kill process tree in Windows</description>
-  <url>https://github.com/jenkinsci/${project.artifactId}</url>
+  <url>https://github.com/JetBrains/${project.artifactId}</url>
 
   <properties>
     <revision>1.31</revision>
     <changelist>-SNAPSHOT</changelist>
-    <gitHubRepo>jenkinsci/${project.artifactId}</gitHubRepo>
+    <gitHubRepo>JetBrains/${project.artifactId}</gitHubRepo>
     <!-- TODO fix violations -->
     <spotbugs.threshold>High</spotbugs.threshold>
     <jmh.version>1.35</jmh.version>
