@@ -360,15 +360,9 @@ BOOL WINAPI KillProcessEx(DWORD dwProcessId, BOOL bTree) {
 		return KillProcess(dwProcessId);
 	}
 
-	OSVERSIONINFO osvi;
 	DWORD dwError;
 
-	// determine operating system version
-	osvi.dwOSVersionInfoSize = sizeof(osvi);
-	GetVersionEx(&osvi);
-
-	if (osvi.dwPlatformId == VER_PLATFORM_WIN32_NT &&
-		osvi.dwMajorVersion < 5)
+	if (false)
 	{
 		// obtain a handle to the default process heap
 		HANDLE hHeap = GetProcessHeap();
