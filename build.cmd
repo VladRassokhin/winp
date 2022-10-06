@@ -43,17 +43,17 @@ if %errorlevel% neq 0 exit /b %errorlevel%
 
 echo ### Updating WinP resource files for the %configuration% build
 cd %BUIDROOT%
-COPY native\win32\%configuration%\winp.dll src\main\resources\winp.dll
+COPY native\build-win32\%configuration%\winp.dll src\main\resources\winp.dll
 if %errorlevel% neq 0 exit /b %errorlevel%
-COPY native\x64\%configuration%\winp.dll src\main\resources\winp64.dll
+COPY native\build-x64\%configuration%\winp.dll src\main\resources\winp64.dll
 if %errorlevel% neq 0 exit /b %errorlevel%
-COPY native\arm64\%configuration%\winp.dll src\main\resources\winp64a.dll
+COPY native\build-arm64\%configuration%\winp.dll src\main\resources\winp64a.dll
 if %errorlevel% neq 0 exit /b %errorlevel%
-COPY native\sendctrlc\Win32\%configuration%\sendctrlc.exe src\main\resources\sendctrlc.exe
+COPY native\build-win32\%configuration%\sendctrlc.exe src\main\resources\sendctrlc.exe
 if %errorlevel% neq 0 exit /b %errorlevel%
-COPY native\sendctrlc\x64\%configuration%\sendctrlc.exe src\main\resources\sendctrlc64.exe
+COPY native\build-x64\%configuration%\sendctrlc.exe src\main\resources\sendctrlc64.exe
 if %errorlevel% neq 0 exit /b %errorlevel%
-COPY native\sendctrlc\arm64\%configuration%\sendctrlc.exe src\main\resources\sendctrlc64a.exe
+COPY native\build-arm64\%configuration%\sendctrlc.exe src\main\resources\sendctrlc64a.exe
 if %errorlevel% neq 0 exit /b %errorlevel%
 
 echo ### Build and Test winp.jar for %version%
