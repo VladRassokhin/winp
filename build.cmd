@@ -48,6 +48,7 @@ goto :exit
 :copy_native
 echo ### Updating WinP resource files for the %configuration% build
 cd %BUIDROOT%
+mkdir src\main\resources
 COPY native\Win32\%configuration%\winp.dll src\main\resources\
 if %errorlevel% neq 0 exit /b %errorlevel%
 COPY native\x64\%configuration%\winp.x64.dll src\main\resources\
